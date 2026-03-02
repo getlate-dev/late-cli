@@ -1,0 +1,52 @@
+{
+  "name": "@getlatedev/cli",
+  "version": "0.1.0",
+  "description": "CLI for Late - Schedule and manage social media posts across 13 platforms",
+  "type": "module",
+  "bin": {
+    "late": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "SKILL.md",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "social-media",
+    "scheduling",
+    "cli",
+    "ai-agent",
+    "instagram",
+    "tiktok",
+    "twitter",
+    "linkedin",
+    "facebook",
+    "threads",
+    "youtube",
+    "bluesky",
+    "pinterest"
+  ],
+  "author": "Late <hello@getlate.dev>",
+  "license": "MIT",
+  "homepage": "https://getlate.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/getlate-dev/late-cli"
+  },
+  "dependencies": {
+    "@getlatedev/node": "^0.1.35",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/yargs": "^17.0.32",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  }
+}
