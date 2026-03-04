@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "@getlatedev/node": "^0.1.35",
+    "open": "^10.1.0",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
