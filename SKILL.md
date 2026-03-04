@@ -18,11 +18,18 @@ Schedule and publish social media posts across 13 platforms (Instagram, TikTok, 
 
 ```bash
 npm install -g late
-late auth:set --key "sk-your-api-key"
-late auth:check  # verify it works
+
+# Log in via browser (recommended)
+late auth:login
+
+# Or set your API key manually
+late auth:set --key "sk_your-api-key"
+
+# Verify it works
+late auth:check
 ```
 
-Or set the env var directly: `export LATE_API_KEY="sk-your-api-key"`
+Or set the env var directly: `export LATE_API_KEY="sk_your-api-key"`
 
 ## Core Workflow
 
@@ -56,11 +63,17 @@ Errors always return: `{"error": true, "message": "...", "status": 401}`
 ### Authentication
 
 ```bash
-# Save API key
-late auth:set --key "sk-your-api-key"
+# Log in via browser (opens browser, creates API key automatically)
+late auth:login
+
+# Or with a custom device name
+late auth:login --device-name "my-server"
+
+# Save API key manually
+late auth:set --key "sk_your-api-key"
 
 # Optionally set custom API URL
-late auth:set --key "sk-..." --url "https://custom.api.url/api/v1"
+late auth:set --key "sk_..." --url "https://custom.api.url/api/v1"
 
 # Verify key works
 late auth:check
