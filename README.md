@@ -1,4 +1,4 @@
-# Late CLI
+# Zernio CLI
 
 Schedule and manage social media posts across 13 platforms from the terminal.
 
@@ -7,23 +7,23 @@ Built for developers and AI agents. Outputs JSON by default.
 ## Install
 
 ```bash
-npm install -g late
+npm install -g @zernio/cli
 ```
 
 ## Quick Start
 
 ```bash
 # 1. Log in via browser (recommended)
-late auth:login
+zernio auth:login
 
-# Or set your API key manually (get one at https://getlate.dev/dashboard/api-keys)
-late auth:set --key "sk_your-api-key"
+# Or set your API key manually (get one at https://zernio.com/dashboard/api-keys)
+zernio auth:set --key "sk_your-api-key"
 
 # 2. List your accounts
-late accounts:list --pretty
+zernio accounts:list --pretty
 
 # 3. Schedule a post
-late posts:create --text "Hello from the CLI!" --accounts <accountId> --scheduledAt "2025-06-01T10:00:00Z"
+zernio posts:create --text "Hello from the CLI!" --accounts <accountId> --scheduledAt "2025-06-01T10:00:00Z"
 ```
 
 ## Authentication
@@ -31,7 +31,7 @@ late posts:create --text "Hello from the CLI!" --accounts <accountId> --schedule
 ### Browser login (recommended)
 
 ```bash
-late auth:login
+zernio auth:login
 ```
 
 Opens your browser to authorize the CLI. An API key is created automatically and saved to `~/.late/config.json`. Running it again from the same device replaces the existing key.
@@ -42,39 +42,39 @@ Options:
 ### Manual API key
 
 ```bash
-late auth:set --key "sk_your-api-key"
+zernio auth:set --key "sk_your-api-key"
 ```
 
 ### Verify
 
 ```bash
-late auth:check
+zernio auth:check
 ```
 
 ## Commands
 
 | Command | Description |
 |---------|-------------|
-| `late auth:login` | Log in via browser |
-| `late auth:set --key <key>` | Save API key manually |
-| `late auth:check` | Verify API key |
-| `late profiles:list` | List profiles |
-| `late profiles:create --name <name>` | Create profile |
-| `late profiles:get <id>` | Get profile |
-| `late profiles:update <id>` | Update profile |
-| `late profiles:delete <id>` | Delete profile |
-| `late accounts:list` | List social accounts |
-| `late accounts:get <id>` | Get account details |
-| `late accounts:health` | Check account health |
-| `late posts:create` | Create/schedule a post |
-| `late posts:list` | List posts |
-| `late posts:get <id>` | Get post details |
-| `late posts:delete <id>` | Delete a post |
-| `late posts:retry <id>` | Retry failed post |
-| `late analytics:posts` | Post analytics |
-| `late analytics:daily` | Daily metrics |
-| `late analytics:best-time` | Best posting times |
-| `late media:upload <file>` | Upload media file |
+| `zernio auth:login` | Log in via browser |
+| `zernio auth:set --key <key>` | Save API key manually |
+| `zernio auth:check` | Verify API key |
+| `zernio profiles:list` | List profiles |
+| `zernio profiles:create --name <name>` | Create profile |
+| `zernio profiles:get <id>` | Get profile |
+| `zernio profiles:update <id>` | Update profile |
+| `zernio profiles:delete <id>` | Delete profile |
+| `zernio accounts:list` | List social accounts |
+| `zernio accounts:get <id>` | Get account details |
+| `zernio accounts:health` | Check account health |
+| `zernio posts:create` | Create/schedule a post |
+| `zernio posts:list` | List posts |
+| `zernio posts:get <id>` | Get post details |
+| `zernio posts:delete <id>` | Delete a post |
+| `zernio posts:retry <id>` | Retry failed post |
+| `zernio analytics:posts` | Post analytics |
+| `zernio analytics:daily` | Daily metrics |
+| `zernio analytics:best-time` | Best posting times |
+| `zernio media:upload <file>` | Upload media file |
 
 ## Configuration
 
