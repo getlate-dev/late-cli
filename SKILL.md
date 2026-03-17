@@ -2,12 +2,12 @@
 name: late
 description: Schedule and manage social media posts across 13 platforms from the CLI
 version: 0.1.0
-homepage: https://docs.getlate.dev
+homepage: https://docs.zernio.com
 tags: [social-media, scheduling, instagram, tiktok, twitter, linkedin, facebook, threads, youtube, bluesky, pinterest, reddit, snapchat, telegram]
 metadata:
   env:
-    - LATE_API_KEY (required) - Your Late API key from https://getlate.dev/settings/api
-    - LATE_API_URL (optional) - Defaults to https://getlate.dev/api
+    - LATE_API_KEY (required) - Your Zernio API key from https://zernio.com/settings/api
+    - LATE_API_URL (optional) - Defaults to https://zernio.com/api
 ---
 
 # Late CLI

@@ -1,4 +1,4 @@
-import { LateApiError } from '@getlatedev/node';
+import { LateApiError } from '@zernio/node';
 import { outputError } from './output.js';
 
 /**

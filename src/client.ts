@@ -1,4 +1,4 @@
-import Late from '@getlatedev/node';
+import Late from '@zernio/node';
 import { getConfig, requireApiKey } from './utils/config.js';
 
 /**

@@ -45,7 +45,7 @@ export function getConfig(): LateConfig {
 
   return {
     apiKey: process.env.LATE_API_KEY || file.apiKey,
-    // SDK default is https://getlate.dev/api (it adds /v1/ prefix to paths internally)
+    // SDK default is https://zernio.com/api (it adds /v1/ prefix to paths internally)
     baseUrl: process.env.LATE_API_URL || file.baseUrl,
   };
 }

@@ -3,15 +3,15 @@ import { hostname } from 'os';
 import { getConfig, writeConfig, requireApiKey } from '../utils/config.js';
 import { output, outputError } from '../utils/output.js';
 import { handleError } from '../utils/errors.js';
-import Late from '@getlatedev/node';
+import Late from '@zernio/node';
 
 /** Default API base URL (without /v1/ suffix, matches SDK default) */
-const DEFAULT_BASE_URL = 'https://getlate.dev/api';
+const DEFAULT_BASE_URL = 'https://zernio.com/api';
 
 /**
  * Resolve the base URL for direct fetch calls (not through the SDK).
  * The SDK adds /v1/ internally, but for auth endpoints we call non-SDK routes
- * so we need the raw origin (e.g. https://getlate.dev).
+ * so we need the raw origin (e.g. https://zernio.com).
  */
 function getApiOrigin(): string {
   const config = getConfig();

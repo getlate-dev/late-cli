@@ -1,10 +1,11 @@
 {
-  "name": "@getlatedev/cli",
+  "name": "@zernio/cli",
   "version": "0.1.0",
-  "description": "CLI for Late - Schedule and manage social media posts across 13 platforms",
+  "description": "CLI for Zernio - Schedule and manage social media posts across 13 platforms",
   "type": "module",
   "bin": {
-    "late": "./dist/index.js"
+    "late": "./dist/index.js",
+    "zernio": "./dist/index.js"
   },
   "main": "./dist/index.js",
   "files": [
@@ -32,15 +33,15 @@
     "bluesky",
     "pinterest"
   ],
-  "author": "Late <hello@getlate.dev>",
+  "author": "Zernio <hello@zernio.com>",
   "license": "MIT",
-  "homepage": "https://getlate.dev",
+  "homepage": "https://zernio.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/getlate-dev/late-cli"
+    "url": "https://github.com/zernio-dev/zernio-cli"
   },
   "dependencies": {
-    "@getlatedev/node": "^0.1.35",
+    "@zernio/node": "^0.1.58",
     "open": "^10.1.0",
     "yargs": "^17.7.2"
   },
