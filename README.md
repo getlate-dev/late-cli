@@ -1,6 +1,6 @@
 # Zernio CLI
 
-Schedule and manage social media posts across 13 platforms from the terminal.
+Schedule and manage social media posts across 14 platforms from the terminal.
 
 Built for developers and AI agents. Outputs JSON by default.
 
@@ -93,7 +93,7 @@ This CLI ships with a `SKILL.md` file for AI agent discovery (Claude Code, OpenC
 
 ## Supported Platforms
 
-Instagram, TikTok, X (Twitter), LinkedIn, Facebook, Threads, YouTube, Bluesky, Pinterest, Reddit, Snapchat, Telegram, Google Business Profile.
+Instagram, TikTok, X (Twitter), LinkedIn, Facebook, Threads, YouTube, Bluesky, Pinterest, Reddit, Snapchat, Telegram, WhatsApp, Google Business Profile.
 
 ## License
 

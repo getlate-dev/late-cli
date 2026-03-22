@@ -1,7 +1,7 @@
 {
   "name": "@zernio/cli",
   "version": "0.1.0",
-  "description": "CLI for Zernio - Schedule and manage social media posts across 13 platforms",
+  "description": "CLI for Zernio - Schedule and manage social media posts across 14 platforms",
   "type": "module",
   "bin": {
     "late": "./dist/index.js",
