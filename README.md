@@ -34,7 +34,7 @@ zernio posts:create --text "Hello from the CLI!" --accounts <accountId> --schedu
 zernio auth:login
 ```
 
-Opens your browser to authorize the CLI. An API key is created automatically and saved to `~/.late/config.json`. Running it again from the same device replaces the existing key.
+Opens your browser to authorize the CLI. An API key is created automatically and saved to `~/.zernio/config.json`. Running it again from the same device replaces the existing key.
 
 Options:
 - `--device-name <name>` - Custom device name for the API key label (defaults to your hostname)
@@ -78,12 +78,14 @@ zernio auth:check
 
 ## Configuration
 
-Config is stored at `~/.late/config.json`. Environment variables take precedence:
+Config is stored at `~/.zernio/config.json`. Environment variables take precedence:
 
 | Env Var | Description |
 |---------|-------------|
-| `LATE_API_KEY` | API key (required) |
-| `LATE_API_URL` | Custom API base URL |
+| `ZERNIO_API_KEY` | API key (required) |
+| `ZERNIO_API_URL` | Custom API base URL |
+
+Legacy env vars `LATE_API_KEY` / `LATE_API_URL` and config at `~/.late/config.json` are still supported as fallbacks.
 
 ## AI Agent Integration
 

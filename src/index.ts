@@ -8,14 +8,14 @@ import { registerAnalyticsCommands } from './commands/analytics.js';
 import { registerMediaCommands } from './commands/media.js';
 
 /**
- * Late CLI - Schedule and manage social media posts across 13 platforms.
+ * Zernio CLI - Schedule and manage social media posts across 13 platforms.
  *
  * Outputs JSON by default (optimized for AI agents and piping).
  * Use --pretty for human-readable indented JSON.
  */
 let cli = yargs(hideBin(process.argv))
-  .scriptName('late')
-  .usage('Usage: late <command> [options]')
+  .scriptName('zernio')
+  .usage('Usage: zernio <command> [options]')
   .option('pretty', {
     type: 'boolean',
     describe: 'Pretty-print JSON output',
@@ -23,7 +23,7 @@ let cli = yargs(hideBin(process.argv))
     global: true,
   })
   .strict()
-  .demandCommand(1, 'You need to specify a command. Run "late --help" for available commands.')
+  .demandCommand(1, 'You need to specify a command. Run "zernio --help" for available commands.')
   .help()
   .alias('h', 'help')
   .version()

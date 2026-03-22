@@ -98,7 +98,7 @@ export function registerAuthCommands(yargs: Argv): Argv {
 
           // Session expired
           if (pollRes.status === 410) {
-            outputError('Authorization session expired. Run `late auth:login` again.');
+            outputError('Authorization session expired. Run `zernio auth:login` again.');
           }
 
           // Polling too fast (shouldn't happen, but handle gracefully)
@@ -115,7 +115,7 @@ export function registerAuthCommands(yargs: Argv): Argv {
           if (data.status === 'authorized' && data.apiKey) {
             // Save the API key
             writeConfig({ apiKey: data.apiKey });
-            process.stderr.write('  Authorized! API key saved to ~/.late/config.json\n\n');
+            process.stderr.write('  Authorized! API key saved to ~/.zernio/config.json\n\n');
             output(
               { success: true, message: 'Logged in successfully. API key saved.' },
               argv.pretty as boolean,
@@ -131,12 +131,12 @@ export function registerAuthCommands(yargs: Argv): Argv {
         }
 
         // Timed out
-        outputError('Authorization timed out. Run `late auth:login` again.');
+        outputError('Authorization timed out. Run `zernio auth:login` again.');
       },
     )
     .command(
       'auth:set',
-      'Save API key to ~/.late/config.json',
+      'Save API key to ~/.zernio/config.json',
       (y) =>
         y
           .option('key', {
@@ -153,7 +153,7 @@ export function registerAuthCommands(yargs: Argv): Argv {
         if (argv.url) updates.baseUrl = argv.url;
 
         writeConfig(updates);
-        output({ success: true, message: 'API key saved to ~/.late/config.json' }, argv.pretty as boolean);
+        output({ success: true, message: 'API key saved to ~/.zernio/config.json' }, argv.pretty as boolean);
       },
     )
     .command(
