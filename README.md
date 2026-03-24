@@ -85,8 +85,6 @@ Config is stored at `~/.zernio/config.json`. Environment variables take preceden
 | `ZERNIO_API_KEY` | API key (required) |
 | `ZERNIO_API_URL` | Custom API base URL |
 
-Legacy env vars `LATE_API_KEY` / `LATE_API_URL` and config at `~/.late/config.json` are still supported as fallbacks.
-
 ## AI Agent Integration
 
 This CLI ships with a `SKILL.md` file for AI agent discovery (Claude Code, OpenClaw, etc.). AI agents can use the CLI to schedule posts, check analytics, and manage social accounts programmatically.
