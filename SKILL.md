@@ -5,9 +5,11 @@ version: 0.2.0
 homepage: https://docs.zernio.com
 tags: [social-media, scheduling, instagram, tiktok, twitter, linkedin, facebook, threads, youtube, bluesky, pinterest, reddit, snapchat, telegram]
 metadata:
-  env:
-    - ZERNIO_API_KEY (required) - Your Zernio API key from https://zernio.com/settings/api
-    - ZERNIO_API_URL (optional) - Defaults to https://zernio.com/api
+  clawdbot:
+    requires:
+      env:
+        - ZERNIO_API_KEY
+    primaryEnv: ZERNIO_API_KEY
 ---
 
 # Zernio CLI
