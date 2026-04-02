@@ -1,7 +1,7 @@
 {
   "name": "@zernio/cli",
-  "version": "0.1.0",
-  "description": "CLI for Zernio - Schedule and manage social media posts across 14 platforms",
+  "version": "0.2.0",
+  "description": "CLI for Zernio - Schedule posts, manage inbox, broadcasts, sequences, and automations across 14 platforms",
   "type": "module",
   "bin": {
     "late": "./dist/index.js",
@@ -41,7 +41,7 @@
     "url": "https://github.com/zernio-dev/zernio-cli"
   },
   "dependencies": {
-    "@zernio/node": "^0.1.58",
+    "@zernio/node": "^0.2.37",
     "open": "^10.1.0",
     "yargs": "^17.7.2"
   },

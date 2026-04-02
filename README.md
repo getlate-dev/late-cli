@@ -1,6 +1,6 @@
 # Zernio CLI
 
-Schedule and manage social media posts across 14 platforms from the terminal.
+Schedule posts, manage inbox, broadcasts, sequences, and automations across 14 platforms from the terminal.
 
 Built for developers and AI agents. Outputs JSON by default.
 
@@ -75,6 +75,55 @@ zernio auth:check
 | `zernio analytics:daily` | Daily metrics |
 | `zernio analytics:best-time` | Best posting times |
 | `zernio media:upload <file>` | Upload media file |
+| **Inbox** | |
+| `zernio inbox:conversations` | List DM conversations |
+| `zernio inbox:conversation <id>` | Get conversation details |
+| `zernio inbox:messages <id>` | Get messages in conversation |
+| `zernio inbox:send <id>` | Send a DM |
+| `zernio inbox:comments` | List post comments |
+| `zernio inbox:post-comments <id>` | Get comments on a post |
+| `zernio inbox:reply <postId>` | Reply to a comment |
+| `zernio inbox:reviews` | List reviews |
+| `zernio inbox:review-reply <id>` | Reply to a review |
+| **Contacts** | |
+| `zernio contacts:list` | List contacts |
+| `zernio contacts:create` | Create a contact |
+| `zernio contacts:get <id>` | Get contact details |
+| `zernio contacts:update <id>` | Update a contact |
+| `zernio contacts:delete <id>` | Delete a contact |
+| `zernio contacts:channels <id>` | List contact channels |
+| `zernio contacts:set-field <id> <slug>` | Set custom field |
+| `zernio contacts:clear-field <id> <slug>` | Clear custom field |
+| `zernio contacts:bulk-create` | Bulk create from JSON |
+| **Broadcasts** | |
+| `zernio broadcasts:list` | List broadcasts |
+| `zernio broadcasts:create` | Create broadcast draft |
+| `zernio broadcasts:get <id>` | Get broadcast with stats |
+| `zernio broadcasts:update <id>` | Update broadcast |
+| `zernio broadcasts:delete <id>` | Delete broadcast |
+| `zernio broadcasts:send <id>` | Send immediately |
+| `zernio broadcasts:schedule <id>` | Schedule for later |
+| `zernio broadcasts:cancel <id>` | Cancel broadcast |
+| `zernio broadcasts:recipients <id>` | List recipients |
+| `zernio broadcasts:add-recipients <id>` | Add recipients |
+| **Sequences** | |
+| `zernio sequences:list` | List sequences |
+| `zernio sequences:create` | Create sequence |
+| `zernio sequences:get <id>` | Get sequence with steps |
+| `zernio sequences:update <id>` | Update sequence |
+| `zernio sequences:delete <id>` | Delete sequence |
+| `zernio sequences:activate <id>` | Activate sequence |
+| `zernio sequences:pause <id>` | Pause sequence |
+| `zernio sequences:enroll <id>` | Enroll contacts |
+| `zernio sequences:unenroll <id> <contactId>` | Unenroll contact |
+| `zernio sequences:enrollments <id>` | List enrollments |
+| **Automations** | |
+| `zernio automations:list` | List comment-to-DM automations |
+| `zernio automations:create` | Create automation |
+| `zernio automations:get <id>` | Get automation with logs |
+| `zernio automations:update <id>` | Update automation |
+| `zernio automations:delete <id>` | Delete automation |
+| `zernio automations:logs <id>` | List trigger logs |
 
 ## Configuration
 
@@ -85,13 +134,15 @@ Config is stored at `~/.zernio/config.json`. Environment variables take preceden
 | `ZERNIO_API_KEY` | API key (required) |
 | `ZERNIO_API_URL` | Custom API base URL |
 
+Legacy env vars `LATE_API_KEY` / `LATE_API_URL` and config at `~/.late/config.json` are still supported as fallbacks.
+
 ## AI Agent Integration
 
-This CLI ships with a `SKILL.md` file for AI agent discovery (Claude Code, OpenClaw, etc.). AI agents can use the CLI to schedule posts, check analytics, and manage social accounts programmatically.
+This CLI ships with a `SKILL.md` file for AI agent discovery (Claude Code, OpenClaw, etc.). AI agents can use the CLI to schedule posts, manage inbox conversations, send broadcasts, run drip sequences, and set up comment-to-DM automations programmatically.
 
 ## Supported Platforms
 
-Instagram, TikTok, X (Twitter), LinkedIn, Facebook, Threads, YouTube, Bluesky, Pinterest, Reddit, Snapchat, Telegram, WhatsApp, Google Business Profile.
+Instagram, TikTok, X (Twitter), LinkedIn, Facebook, Threads, YouTube, Bluesky, Pinterest, Reddit, Snapchat, Telegram, Google Business Profile.
 
 ## License
 
