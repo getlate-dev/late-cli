@@ -1,6 +1,6 @@
 {
   "name": "@zernio/cli",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "CLI for Zernio - Schedule posts, manage inbox, broadcasts, sequences, and automations across 14 platforms",
   "type": "module",
   "bin": {
